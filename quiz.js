@@ -1,19 +1,20 @@
 function checkAnswer() {
-  const correctAnswer = "4" // Function body
 
-    const selectedoption = document.querySelector('input[name="quiz"]:checked');
+  const correctAnswer = "4" 
 
-    const feedback = document.getElementById(feedback)
+    const selectedOption = document.querySelector('input[name="quiz"]:checked');
 
-    if (!selectedoption) {
+    const feedback = document.getElementById("feedback")
+
+    if (!selectedOption) {
       feedback.textContent = "please select an answer.";
       feedback.style.color = "orange";
       return;
     }
 
-    const userAnswer = selectedoption.Value;
+    const userAnswer = selectedOption.Value;
 
-    if(userAnswer=== correctAnswer) {
+    if(userAnswer === correctAnswer) {
         feedback.textContent = "Correct! Well done.";
         feedback.style.color = "green"
     }else {
