@@ -1,22 +1,22 @@
 function checkAnswer() {
 
-  const correctAnswer = "4" 
+  const correctAnswer = "4"; 
 
     const selectedOption = document.querySelector('input[name="quiz"]:checked');
 
-    const feedback = document.getElementById("feedback")
+    const feedback = document.getElementById("feedback");
 
     if (!selectedOption) {
-      feedback.textContent = "please select an answer.";
+      feedback.textContent = "Please select an answer.";
       feedback.style.color = "orange";
       return;
     }
 
-    const userAnswer = selectedOption.Value;
+    const userAnswer = selectedOption.value;
 
     if(userAnswer === correctAnswer) {
         feedback.textContent = "Correct! Well done.";
-        feedback.style.color = "green"
+        feedback.style.color = "green";
     }else {
         feedback.textContent = "That's incorrect. Try again!";
         feedback.style.color = "red";
